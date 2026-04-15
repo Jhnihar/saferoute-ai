@@ -113,6 +113,9 @@ const Index = () => {
               </div>
             </div>
 
+            {/* Comparison Table */}
+            <RouteComparisonTable routes={routes} />
+
             {/* Risk Breakdown for recommended */}
             {recommended && (
               <RiskBreakdown risk={recommended.adjustedRisk} label={recommended.name} />
