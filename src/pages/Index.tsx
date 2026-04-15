@@ -5,6 +5,7 @@ import { analyzeRoutes, type AnalyzedRoute } from "@/lib/safetyEngine";
 import { RouteInput } from "@/components/RouteInput";
 import { SafetyScoreCard } from "@/components/SafetyScoreCard";
 import { RiskBreakdown } from "@/components/RiskBreakdown";
+import { RouteComparisonTable } from "@/components/RouteComparisonTable";
 import { RouteVisualization } from "@/components/RouteVisualization";
 import { AlertBanner } from "@/components/AlertBanner";
 import { AnalyzingOverlay } from "@/components/AnalyzingOverlay";
@@ -111,6 +112,9 @@ const Index = () => {
                 ))}
               </div>
             </div>
+
+            {/* Comparison Table */}
+            <RouteComparisonTable routes={routes} />
 
             {/* Risk Breakdown for recommended */}
             {recommended && (
